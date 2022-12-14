@@ -3,12 +3,25 @@
  */
 package ru.clevertec;
 
+
+import ru.clevertec.view.StoreView;
+
+
+
+
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        String list = "2-2" + '\n' +
+                "3-4" + '\n' +
+                "5-2"; //+ '\n' +
+//                "swee-1111";
+//        for (int i = 0; i < args.length; i++) {
+//            list +=args[i] + '\n';
+//        }
+        StoreView storeView = new StoreView();
+        storeView.start(list);
+        System.out.println("list = " + list);
     }
+
 }
