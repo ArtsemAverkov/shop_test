@@ -1,6 +1,5 @@
 package ru.clevertec.service;
 
-import ru.clevertec.dto.ProductDto;
 import ru.clevertec.entity.Product;
 import ru.clevertec.repository.ProductAPIRepository;
 import ru.clevertec.repository.ProductRepository;
@@ -15,7 +14,7 @@ public class ProductAPIService implements ProductService{
     }
 
     @Override
-    public List<Product> read(ProductDto id) {
-        return productRepository.read(id);
+    public List<Product> read(List<Long> id, List<Long> amount) {
+        return productRepository.read(id, amount);
     }
 }

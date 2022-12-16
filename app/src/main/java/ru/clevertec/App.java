@@ -14,14 +14,13 @@ public class App {
     public static void main(String[] args) {
         String list = "2-2" + '\n' +
                 "3-4" + '\n' +
-                "5-2"; //+ '\n' +
-//                "swee-1111";
+                "5-2" + '\n' +
+                "swee-1111";
 //        for (int i = 0; i < args.length; i++) {
 //            list +=args[i] + '\n';
 //        }
         StoreView storeView = new StoreView();
         storeView.start(list);
-        System.out.println("list = " + list);
     }
 
 }

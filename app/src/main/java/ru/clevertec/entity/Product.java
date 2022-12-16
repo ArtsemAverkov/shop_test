@@ -4,6 +4,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
+import java.util.List;
 import java.util.Optional;
 
 
@@ -26,7 +27,9 @@ public class Product {
         return '\n' + "id=" + id +
                 ", name='" + name + '\'' +
                 ", price=" + price +
-                ", weight=" + amount +
+                ", amount=" + amount +
                 ", metaInf=" + metaInf;
     }
+
+
 }
