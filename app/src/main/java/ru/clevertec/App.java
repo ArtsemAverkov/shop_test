@@ -12,10 +12,12 @@ import ru.clevertec.view.StoreView;
 public class App {
 
     public static void main(String[] args) {
-        String list = "2-2" + '\n' +
-                "3-4" + '\n' +
+        String list = "1-1" + '\n' +
+                "10-4" + '\n' +
+                "4-2" + '\n' +
                 "5-2" + '\n' +
-                "swee-1111";
+                "6-2" + '\n' +
+                "CARD-2222";
 //        for (int i = 0; i < args.length; i++) {
 //            list +=args[i] + '\n';
 //        }

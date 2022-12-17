@@ -11,8 +11,8 @@ import ru.clevertec.service.ProductService;
 import java.util.*;
 import java.util.stream.Collectors;
 
-
 public class StoreView implements View {
+
     private ProductService productService;
     Parser parser = new Parser();
     Checks check = new Checks();
@@ -32,10 +32,14 @@ public class StoreView implements View {
                 .collect(Collectors.toList());
 
         List<Product> read = productService.read(longList, collectAmount);
-        System.out.println("read = " + read);
+        List<Product> productList = check.checkСounting(read);
+        System.out.println("Check " + productList);
+        Double allSum = check.getAllSum();
+        System.out.println("Sum : " + allSum);
+        Double sumAfterDiscounter = check.getSumAfterDiscounter(productList);
+        System.out.println("sum After Discounter : " + sumAfterDiscounter);
 
-        List<Product> checkСounting = check.checkСounting(read);
-        System.out.println("checkСounting = " + checkСounting);
+
     }
-    }
+}
 

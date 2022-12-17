@@ -24,6 +24,7 @@ dependencies {
     implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:31.1-jre'
+    implementation group: 'org.decimal4j', name: 'decimal4j', version: '1.0.3'
 }
 
 application {

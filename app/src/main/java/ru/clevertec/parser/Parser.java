@@ -1,17 +1,19 @@
 package ru.clevertec.parser;
 
 import ru.clevertec.dto.ProductDto;
-
+import ru.clevertec.entity.Discount;
 
 import java.util.*;
-
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 public class Parser {
     ArrayList<ProductDto> stringArray = new ArrayList<>();
     List<String> listArray = new ArrayList<>();
     public static String getDiscount = null;
-    private final static String DISCOUNT = "swee-1111";
+    String pattern = "(\\bC)";
+    Pattern ptrn = Pattern.compile(pattern);
 
 
     public ArrayList<ProductDto> parser(String response) {
@@ -26,31 +28,45 @@ public class Parser {
                 String s1 = strings.get(i);
                 listArray.add(s1);
             }
-            if (s.equals(DISCOUNT)) {
-                idDiscount();
+
+            Matcher matcher = ptrn.matcher(s);
+            if (matcher.find()) {
+                if (Objects.equals(s, Discount.CARD_1111.toString())) {
+                    idDiscount();
+                }else {
+                    listArray.remove(listArray.size() - 1);
+                    System.out.println("Такой карты нет \n Пожалуста введите карту в фотмате CARD_xxxx");
+                }
             }
         }
         addProductDtos();
-        System.out.println("stringArray Parser = " + stringArray);
         return stringArray;
+    }
+
+
+
+    private void idDiscount (){
+            String s = listArray.get(listArray.size() - 1);
+            getDiscount = s;
+            listArray.remove(listArray.size() - 1);
         }
 
-    private void idDiscount () {
-        String s = listArray.get(listArray.size()-1);
-        getDiscount=s;
-                listArray.remove(listArray.size()-1);
-            }
+
 
     private void addProductDtos () {
-        for (int i = 0; i < listArray.size(); i++) {
-            String split = listArray.get(i);
-            String[] splitResult = split.split("-");
-            List<String> asList = Arrays.asList(splitResult);
-            stringArray.add(ProductDto.builder()
-                    .id(Long.valueOf((asList.get(0))))
-                    .amount(Long.valueOf((asList.get(1))))
-                    .build());
-            System.out.println("stringArray = " + stringArray);
+        try {
+            for (int i = 0; i < listArray.size(); i++) {
+                String split = listArray.get(i);
+                String[] splitResult = split.split("-");
+                List<String> asList = Arrays.asList(splitResult);
+                stringArray.add(ProductDto.builder()
+                        .id(Long.valueOf((asList.get(0))))
+                        .amount(Long.valueOf((asList.get(1))))
+                        .build());
+            }
+        }catch (NumberFormatException | ArrayIndexOutOfBoundsException ofBoundsException){
+            System.out.println("Вы ввели неправильное значение \n введите значение в формате 1-1/id-amount");
+
         }
     }
 }

@@ -18,4 +18,11 @@ public class MetaInf {
     public Optional<List<Shop>> getShopList(){
         return Optional.of(shopList);
     }
+
+    @Override
+    public String toString() {
+        return "MetaInf" +
+                "expirationDate :" + expirationDate +
+                ", isDiscount :" + isDiscount;
+    }
 }

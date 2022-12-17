@@ -40,7 +40,60 @@ public class ProductUtils {
                                 ))
                         ),
                 new Product()
+                        .setId(3L)
+                        .setName("tomato")
+                        .setPrice(2.2)
+                        .setAmount(500L)
+                        .setMetaInf(new MetaInf()
+                                .setDiscount(true)
+                                .setExpirationDate(LocalDate.parse("2022-06-08"))
+                                .setShopList(List.of(
+                                        Shop.ALMI,
+                                        Shop.DVA_GUSIA
+                                ))
+                        ),
+                new Product()
                         .setId(4L)
+                        .setName("cherry")
+                        .setPrice(1.7)
+                        .setAmount(500L)
+                        .setMetaInf(new MetaInf()
+                                .setDiscount(true)
+                                .setExpirationDate(LocalDate.parse("2022-06-08"))
+                                .setShopList(List.of(
+                                        Shop.ALMI,
+                                        Shop.DVA_GUSIA
+                                ))
+                        ),
+                new Product()
+                        .setId(5L)
+                        .setName("water")
+                        .setPrice(4.6)
+                        .setAmount(500L)
+                        .setMetaInf(new MetaInf()
+                                .setDiscount(true)
+                                .setExpirationDate(LocalDate.parse("2022-06-08"))
+                                .setShopList(List.of(
+                                        Shop.ALMI,
+                                        Shop.DVA_GUSIA
+                                ))
+                        ),
+
+                new Product()
+                        .setId(6L)
+                        .setName("banana")
+                        .setPrice(3.1)
+                        .setAmount(500L)
+                        .setMetaInf(new MetaInf()
+                                .setDiscount(true)
+                                .setExpirationDate(LocalDate.parse("2022-06-08"))
+                                .setShopList(List.of(
+                                        Shop.ALMI,
+                                        Shop.DVA_GUSIA
+                                ))
+                        ),
+                new Product()
+                        .setId(7L)
                         .setName("lemon")
                         .setPrice(4L)
                         .setAmount(100L)
@@ -53,7 +106,7 @@ public class ProductUtils {
                                 ))
                         ),
                 new Product()
-                        .setId(3L)
+                        .setId(8L)
                         .setName("bread")
                         .setPrice(1L)
                         .setAmount(300L)
