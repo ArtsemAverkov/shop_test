@@ -13,11 +13,11 @@ public class App {
 
     public static void main(String[] args) {
         String list = "1-1" + '\n' +
-                "10-4" + '\n' +
+                "3-4" + '\n' +
                 "4-2" + '\n' +
                 "5-2" + '\n' +
                 "6-2" + '\n' +
-                "CARD-2222";
+                "CARD_1111";
 //        for (int i = 0; i < args.length; i++) {
 //            list +=args[i] + '\n';
 //        }

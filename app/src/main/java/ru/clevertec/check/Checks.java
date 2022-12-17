@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import ru.clevertec.entity.Product;
-import ru.clevertec.parser.Parser;
+import ru.clevertec.parser.ParserInConsole;
 
 import java.util.Comparator;
 import java.util.List;
@@ -15,8 +15,9 @@ import java.util.stream.Collectors;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Checks implements ChechI {
+public class Checks {
     public double allSum = 0.0;
+
     public List<Product> checkСounting(List<Product> productList) {
         final Consumer<Product> productConsumer = products ->
                 Comparator.naturalOrder();
@@ -28,16 +29,13 @@ public class Checks implements ChechI {
                     product.setSum(price * amount);
                 })
                 .forEach(productConsumer);
-
-
-       sumAll(productList);
-
-
+        getAllSum(productList);
         getDiscount(productList, productConsumer);
         return productList;
     }
 
-    private void sumAll (List<Product> productList) {
+
+    public void getAllSum (List<Product> productList) {
         for (int i = 0; i < productList.size(); i++) {
             double sum = productList.get(i)
                     .getSum();
@@ -50,7 +48,7 @@ public class Checks implements ChechI {
                 .filter(product -> product.getMetaInf().get().isDiscount())
                 .collect(Collectors.toList());
 
-        if (Objects.nonNull(Parser.getDiscount)) {
+        if (Objects.nonNull(ParserInConsole.getDiscount)) {
             if (collect.size() >= 5) {
                 collect.stream()
                         .peek(productConsumer)
@@ -62,6 +60,7 @@ public class Checks implements ChechI {
             }
         }
     }
+
 
     public Double getSumAfterDiscounter(List<Product> productList) {
         double allSum = 0.0;
