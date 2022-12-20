@@ -21,7 +21,6 @@ public class StoreView implements View {
     public StoreView() {
        productService = new ProductAPIService();
         createCheckInFile = new CreateCheckInFile();
-
         parser = new ParserInConsole();
     }
 

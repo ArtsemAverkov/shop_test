@@ -13,7 +13,7 @@ public class CreateCheckInFile implements Create{
     @Override
     public void createInFile(List<Product> productList, List<Double> allSum, List<Double> discount) {
         try{
-            FileWriter writer = new FileWriter("app/src/main/resources/check.txt");
+            FileWriter writer = new FileWriter("src/main/resources/check.txt");
 
             for(Product line : productList)
             {
@@ -23,13 +23,13 @@ public class CreateCheckInFile implements Create{
             }
             for(Double line : allSum)
             {
-                writer.write(String.valueOf("Sum :" + line));
+                writer.write(("Sum :" + line));
                 writer.write(System.getProperty("line.separator"));
 
             }
             for(Double line : discount)
             {
-                writer.write(String.valueOf("Sum After Discount :" + line));
+                writer.write(("Sum After Discount :" + line));
                 writer.write(System.getProperty("line.separator"));
             }
             writer.close();

@@ -6,9 +6,9 @@ package ru.clevertec;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class AppTest {
+public class ShopTestTest {
     @Test public void appHasAGreeting() {
-        App classUnderTest = new App();
+        Shop_test classUnderTest = new Shop_test();
         assertNotNull("app should have a greeting", classUnderTest);
     }
 }

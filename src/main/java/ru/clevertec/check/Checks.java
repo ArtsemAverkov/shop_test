@@ -64,6 +64,7 @@ public class Checks {
 
     public Double getSumAfterDiscounter(List<Product> productList) {
         double allSum = 0.0;
+        int size = productList.size();
         for (int i = 0; i < productList.size(); i++) {
             double sum = productList.get(i)
                     .getSum();
