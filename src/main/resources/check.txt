@@ -1,0 +1,17 @@
+
+data :2022-12-21, id: 1, name :'banana', price :2.0, amount :1, sum :1.8
+ metaInf :MetaInfexpirationDate :2022-06-08, isDiscount :true
+
+data :2022-12-21, id: 3, name :'tomato', price :2.2, amount :4, sum :7.920000000000001
+ metaInf :MetaInfexpirationDate :2022-06-08, isDiscount :true
+
+data :2022-12-21, id: 4, name :'cherry', price :1.7, amount :2, sum :3.06
+ metaInf :MetaInfexpirationDate :2022-06-08, isDiscount :true
+
+data :2022-12-21, id: 5, name :'water', price :4.6, amount :2, sum :8.28
+ metaInf :MetaInfexpirationDate :2022-06-08, isDiscount :true
+
+data :2022-12-21, id: 6, name :'banana', price :3.1, amount :2, sum :5.58
+ metaInf :MetaInfexpirationDate :2022-06-08, isDiscount :true
+Sum :29.599999999999998
+Sum After Discount :26.64
