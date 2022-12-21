@@ -1,0 +1,14 @@
+
+data :2022-12-17, id: 1, name :'banana', price :2.0, amount :1, sum :2.0
+ metaInf :MetaInfexpirationDate :2022-06-08, isDiscount :true
+
+data :2022-12-17, id: 4, name :'cherry', price :1.7, amount :4, sum :6.8
+ metaInf :MetaInfexpirationDate :2022-06-08, isDiscount :true
+
+data :2022-12-17, id: 5, name :'water', price :4.6, amount :2, sum :9.2
+ metaInf :MetaInfexpirationDate :2022-06-08, isDiscount :true
+
+data :2022-12-17, id: 6, name :'banana', price :3.1, amount :2, sum :6.2
+ metaInf :MetaInfexpirationDate :2022-06-08, isDiscount :true
+24.2
+24.2
